@@ -7,10 +7,25 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 final class Totp
 {
-    private string $secret;
-    private int $period;
-    private string $algorithm;
-    private int $digits;
+    /**
+     * @var string
+     */
+    private $secret;
+
+    /**
+     * @var int
+     */
+    private $period;
+
+    /**
+     * @var string
+     */
+    private $algorithm;
+
+    /**
+     * @var int
+     */
+    private $digits;
 
     private const DEFAULT_PERIOD = 30;
     private const DEFAULT_DIGITS = 6;
