@@ -43,12 +43,11 @@ final class Totp
             $this->at($timestamp + $this->getPeriod())
         ];
 
-        return in_array($totp, haystack: $values, strict: true);
+        return in_array($totp, $values, true);
     }
 
     public function getUri(string $name, ?UserInterface $user = null): string
     {
-        $name = $name;
         if ($user) {
             $name = sprintf(
                 '%s:%s',
@@ -83,6 +82,7 @@ final class Totp
         }
 
         $hash = hash_hmac($this->getAlgorithm(), $this->intToBytestring($input), $this->byteSecret());
+        $hmac = [];
         foreach (str_split($hash, 2) as $hex) {
             $hmac[] = hexdec($hex);
         }
