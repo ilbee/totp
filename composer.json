@@ -1,0 +1,31 @@
+{
+  "name": "ilbee/totp",
+  "description": "Time-based One-Time Password (TOTP) implementation in PHP",
+  "keywords": ["totp", "otp", "mfa", "2fa", "php"],
+  "homepage": "https://github.com/ilbee/totp",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julien PRIGENT",
+      "email": "julien.prigent@dbmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "christian-riesen/base32": "^1.6"
+  },
+  "suggest": {
+    "endroid/qr-code-bundle": "Enables you to generate TOTP URIs with QR codes"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ilbee\\Totp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ilbee\\Totp\\Tests\\": "tests/"
+    }
+  }
+}
