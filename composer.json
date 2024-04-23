@@ -14,7 +14,7 @@
   "require": {
     "php": "7.4 || ^8.1",
     "christian-riesen/base32": "^1.6",
-    "symfony/security-bundle": "^5.4"
+    "symfony/security-bundle": "^5.4 || ^6.4 || ^7.1"
   },
   "suggest": {
     "endroid/qr-code-bundle": "Enables you to generate TOTP URIs with QR codes"
